@@ -60,9 +60,16 @@ import Card from '../components/Card.astro';
 				body="Come say hi to our amazing Discord community. ❤️"
 			/>
 		</ul>
+		<button id="the-button">jQuery button</button>
 	</main>
 </Layout>
-
+<script>
+	$(() => {
+		$('#the-button').on('click', function() {
+			console.log($(this).text() + ' was clicked!');
+		})
+	})
+</script>	
 <style>
 	main {
 		margin: auto;
